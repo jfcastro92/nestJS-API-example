@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "0261f6cc-b7b3-485c-8c21-95ecf4bdcf35",
+		"name": "NestJS APIs - Books & Authors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32638959"
+	},
+	"item": [
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "getBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{port}}/books",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBooksById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{port}}/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createBook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"El señor de los anillos I\",\r\n    \"author\": \"JJ Martin\",\r\n    \"year\": 2006,\r\n    \"pages\": 1500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/books/",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBook",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_book\": 1,\r\n    \"name\": \"El señor de los anillos I\",\r\n    \"author\": \"JJ Martin\",\r\n    \"year\": 2008,\r\n    \"pages\": 1500 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"newBookName\",\r\n    \"author\": \"newAuthorName\",\r\n    \"year\": \"1997\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authors",
+			"item": [
+				{
+					"name": "getAuthors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{port}}/authors",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{port}}/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createAuthor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"newBook\",\r\n    \"author\": \"authorName\",\r\n    \"year\": \"1990\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/books/",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAuthor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"newBookName\",\r\n    \"author\": \"newAuthorName\",\r\n    \"year\": \"1997\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAuthor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"newBookName\",\r\n    \"author\": \"newAuthorName\",\r\n    \"year\": \"1997\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/books/1",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "3000",
+			"type": "string"
+		}
+	]
+}
